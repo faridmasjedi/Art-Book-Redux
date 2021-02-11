@@ -28,6 +28,7 @@ function Home(props) {
         let {form, name, artist} = filter;
         if (form === 'all' && name === '' && artist === '') { 
             setResult(props.list);
+            setFilterIndex ( [...new Array(props.list.length).keys()] );
             return;
         };
 
